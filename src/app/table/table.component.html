@@ -1,0 +1,47 @@
+<div class="container-fluid mt-2">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>PolicyId</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>InsuredAmount</th>
+                <th>InsuredName</th>
+                <th>InsuredHolderAge</th>
+                <th>PolicyType</th>
+                <th>CoverageType</th>
+                <th>VehicleNumber</th>
+                <th>VehicleModel</th>
+                <th>HouseAddress</th>
+                <th>AssetValue</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.PolicyId}}</td>
+                <td>{{item.Title}}</td>
+                <td>{{item.Description}}</td>
+                <td>{{item.StartDate}}</td>
+                <td>{{item.EndDate}}</td>
+                <td>{{item.InsuredAmount}}</td>
+                <td>{{item.InsuredName}}</td>
+                <td>{{item.InsuredHolderAge}}</td>
+                <td>{{item.PolicyType}}</td>
+                <td>{{item.CoverageType}}</td>
+                <td>{{item.VehicleNumber}}</td>
+                <td>{{item.VehicleModel}}</td>
+                <td>{{item.HouseAddress}}</td>
+                <td>{{item.AssetValue}}</td>
+                <td>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-warning" (clcik)="Edit(item.PolicyId)">Edit</button>
+                        <button type="button" class="btn btn-outline-danger" (clcik)="Remove(item.PolicyId)">Remove</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
